@@ -3,6 +3,9 @@
 Extends [Wisper](https://github.com/krisleech/wisper) with async broadcasting
 of events.
 
+[![Code Climate](https://codeclimate.com/github/krisleech/wisper-async.png)](https://codeclimate.com/github/krisleech/wisper-async)
+[![Build Status](https://travis-ci.org/krisleech/wisper-async.png?branch=master)](https://travis-ci.org/krisleech/wisper-async)
+
 ## Installation
 
 ```ruby
