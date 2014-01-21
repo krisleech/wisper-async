@@ -7,12 +7,14 @@ module Wisper
   class ObjectRegistration
     attr_reader :async
 
+    alias_method :old_initialize, :initialize
+
     def initialize(listener, options)
-      super(listener, options)
-      @async = options.fetch(:async, false)
+      @async = options.delete(:async) { false }
+      old_initialize(listener, options)
     end
 
-    def broadcast(event, *args)
+    def broadcast(event, publisher, *args)
       method_to_call = map_event_to_method(event)
       if should_broadcast?(event) && listener.respond_to?(method_to_call)
         unless async
