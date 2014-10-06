@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 class MyService
-  include Wisper
+  include Wisper::Publisher
 
   def execute
     broadcast('success', self)

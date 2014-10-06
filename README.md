@@ -1,38 +1,10 @@
 # Wisper Async (Experimental)
 
-Extends [Wisper](https://github.com/krisleech/wisper) with async broadcasting
-of events.
-
 [![Code Climate](https://codeclimate.com/github/krisleech/wisper-async.png)](https://codeclimate.com/github/krisleech/wisper-async)
 [![Build Status](https://travis-ci.org/krisleech/wisper-async.png?branch=master)](https://travis-ci.org/krisleech/wisper-async)
 
-## Installation
-
-```ruby
-gem 'wisper-async'
-```
-
-## Usage
-
-By passing `async` option when adding listeners any events broadcast to that
-listener will happen in its own thread.
-
-```ruby
-my_publisher.add_subscriber(MySubscriber.new, :async => true)
-```
-
-This leans on Celluloid.
-
-The listener is transparently turned in to a Celluloid Actor.
-
-Please refer to [Celluloid](https://github.com/celluloid/celluloid/wiki)
-for more information, particually the
-[Gotchas](https://github.com/celluloid/celluloid/wiki/Gotchas).
-
-## Compatibility
-
-Tested with 1.9.x on MRI, JRuby and Rubinius.
-See the [build status](https://travis-ci.org/krisleech/wisper-async) for details.
+*DEPRECATED* please use [Wisper-Celluloid](https://github.com/krisleech/wisper-celluloid)
+instead. It is backwards compatible with this gem.
 
 ## License
 
